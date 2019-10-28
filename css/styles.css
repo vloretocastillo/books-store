@@ -57,7 +57,7 @@ body {
   
   /* Style the back side */
   .flip-card-back {
-    background-color: rgb(127, 128, 129);
+    background-color: rgb(56, 15, 15);
     color: white;
     transform: rotateY(180deg);
     padding: 20px 5px;
@@ -72,16 +72,21 @@ body {
   }
   .flip-card-back p {
     font-size: 0.9rem;
+  }
 
+  .flip-card-back h1 {
+    font-size: 1.4rem;
+    margin: 4% auto 3%;
   }
 
   .flip-card-back button {
+
     padding: 2% 7%;
     border: none;
     border-radius: 5px;
     color: white;
     background-color: black;
-    margin-top: 2%;
+    margin-top: 10%;
     font-size: 1.2rem;
   }
 
@@ -287,17 +292,25 @@ body {
   }
   header {
     height: auto;
-    padding-top: 8%;
+    padding-top: 9%;
   }
 
   header div.logo-container {
+    /* overflow: hidden; */
     width: 100%;
-    
+    /* border: 1px solid red; */
+    /* display: flex; */
+    /* align-items: center; */
   }
 
   header div.search-bar-container {
     width: 100%;
-   
+    /* border: 1px solid red; */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; */
   }
 
  div.search-bar-container input {
@@ -311,7 +324,27 @@ body {
   /*  */
   .flip-card {
     width: 32%;
-  } 
+  }
+
+  /* header {
+    height: auto;
+    text-align: center;
+  } */
+
+  /* .logo-container {
+    width: 100%;
+    border: 1px solid red;
+    
+  } */
+
+  /* header .search-bar-container {
+    width: 100%;
+    border: 1px solid red;
+  } */
+
+  
+
+  
 }
 
 @media only screen and (max-width: 900px) {
@@ -332,5 +365,8 @@ body {
   .flip-card {
     width: 70%;
     margin: 4% auto;
+  }
+  header {
+    margin-bottom: 6%;;
   }
 }
