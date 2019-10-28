@@ -2,7 +2,6 @@
   margin :0;
   padding: 0;
   font-family: 'Work Sans', sans-serif;
-
 }
 
 body {
@@ -132,19 +131,21 @@ body {
     font-size: 1.5rem;
     position: relative;
     left: -10%;
-    border: 1px solid rgb(170, 170, 177);
+    border: 1px solid rgb(189, 185, 185);
     border-radius: 5px;
     font-size: 1.1rem;
     padding: 10px;
     margin: 4% 0;
+    color: white;
+    text-align: center;
 
   }
 
   .search-bar-container input:focus {
-    background-color: rgb(178, 226, 180);
+    background-color: rgb(56, 15, 15);
     outline: none !important;
-    border: 1px solid rgb(149, 189, 151);
-    box-shadow: 0 0 10px rgb(149, 189, 151);
+    border: 1px solid rgb(56, 15, 15);
+    box-shadow: 0 0 10px rgb(56, 15, 15);
 }
 
 
@@ -160,7 +161,7 @@ body {
 
   .main-container {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
       padding: 2% 6%;
       position: relative;
