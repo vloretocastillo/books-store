@@ -285,25 +285,57 @@ body {
   body {
     /* background-color: lightpink; */
   }
+  header {
+    height: auto;
+    padding-top: 8%;
+  }
+
+  header div.logo-container {
+    /* overflow: hidden; */
+    width: 100%;
+    /* border: 1px solid red; */
+    /* display: flex; */
+    /* align-items: center; */
+  }
+
+  header div.search-bar-container {
+    width: 100%;
+    /* border: 1px solid red; */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; */
+  }
+
+ div.search-bar-container input {
+    left: auto;
+  } 
+  div.logo-container img {
+    right: auto; 
+    margin: 0 auto;
+  }
+
+  /*  */
   .flip-card {
     width: 32%;
   }
 
-  header {
+  /* header {
     height: auto;
     text-align: center;
-  }
+  } */
 
-  .logo-container {
+  /* .logo-container {
     width: 100%;
     border: 1px solid red;
     
-  }
+  } */
 
-  header .search-bar-container {
+  /* header .search-bar-container {
     width: 100%;
     border: 1px solid red;
-  }
+  } */
 
   
 
@@ -312,7 +344,7 @@ body {
 
 @media only screen and (max-width: 900px) {
   body {
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
   }
   .flip-card {
     width: 42%;
