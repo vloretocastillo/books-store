@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Book Store</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -34,7 +35,10 @@
               <div class="flip-card-back">
                   <h1>{{ book.title }}</h1>
                   <p>{{ book.description }}</p>
-                  <button>More</button>
+                  
+                  <!-- <button >More </button> -->
+                  <button> <a data-fancybox="gallery" :href="book.detail">MORE</a> </button>
+                
               </div>
               </div>
           </div>

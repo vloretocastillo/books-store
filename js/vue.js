@@ -3,7 +3,7 @@ let app = new Vue({
     data : {
         books : [],
         searchValue : '',
-        loader : 'false'
+        loader : true
     },
 
     computed : {
@@ -26,11 +26,8 @@ let app = new Vue({
     },
 
     created : function () {  
-        this.loader = true      
         this.getData()
-            .then(()=>{
-                this.loader = false
-            })
+            .then(()=>{ this.loader = false })
             .catch(err => console.log(err))
     },
 
