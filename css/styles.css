@@ -291,21 +291,13 @@ body {
   }
 
   header div.logo-container {
-    /* overflow: hidden; */
     width: 100%;
-    /* border: 1px solid red; */
-    /* display: flex; */
-    /* align-items: center; */
+    
   }
 
   header div.search-bar-container {
     width: 100%;
-    /* border: 1px solid red; */
-
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative; */
+   
   }
 
  div.search-bar-container input {
@@ -319,32 +311,12 @@ body {
   /*  */
   .flip-card {
     width: 32%;
-  }
-
-  /* header {
-    height: auto;
-    text-align: center;
-  } */
-
-  /* .logo-container {
-    width: 100%;
-    border: 1px solid red;
-    
-  } */
-
-  /* header .search-bar-container {
-    width: 100%;
-    border: 1px solid red;
-  } */
-
-  
-
-  
+  } 
 }
 
 @media only screen and (max-width: 900px) {
   body {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
   }
   .flip-card {
     width: 42%;
