@@ -10,12 +10,11 @@ body {
 }
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-    margin: 2%;
+    /* margin: 2%; */
+    margin: 2% 0;
     background-color: transparent;
-    /* border: 1px solid blue; */
-    width: 24%;
+    width: 27%;
     height: 300px;
-    /* border: 1px solid #f1f1f1; */
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     overflow: hidden;
   }
@@ -96,10 +95,13 @@ body {
     cursor: pointer;
   }
 
+  /* header */
+
 
   header {
     height: 30vh;
     display: flex;
+    flex-wrap: wrap;
     border-bottom: 2px solid rgb(202, 194, 194);
     
   }
@@ -147,10 +149,9 @@ body {
     height: 150px;
     position: relative;
     right: -30%;
-   
-
   }
 
+  /* main */
 
   .main-container {
       display: flex;
@@ -273,5 +274,59 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 1200px) {
+  body {
+    /* background-color: lightpink; */
+  }
+  .flip-card {
+    width: 32%;
+  }
+
+  header {
+    height: auto;
+    text-align: center;
+  }
+
+  .logo-container {
+    width: 100%;
+    border: 1px solid red;
+    
+  }
+
+  header .search-bar-container {
+    width: 100%;
+    border: 1px solid red;
+  }
+
+  
+
+  
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    /* background-color: lightgreen; */
+  }
+  .flip-card {
+    width: 42%;
+  }
+
+  
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    /* background-color: lightblue; */
+  }
+  .flip-card {
+    width: 70%;
+    margin: 4% auto;
   }
 }
