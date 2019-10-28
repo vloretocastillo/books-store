@@ -16,30 +16,33 @@
           <img src="logo.png" alt="">
         </div>
         <div class="search-bar-container">
-          <!-- <input placeholder="Search book" type="text" v-model='search' v-on:change='filterBooks()'> -->
           <input placeholder="Search book" type="text" v-model='searchValue' >
 
         </div>
       </header>
-      <!-- {{ logSearchValue }} -->
       <div class="main-container">
-    
+
+          <!-- v-if='loade' -->
+        <div  v-if='loader' class="loader-container">
+          <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
           <div class="flip-card" v-for='book in filteredBooks'>
               <div class="flip-card-inner">
               <div class="flip-card-front">
                   <img :src="book.cover" alt="Avatar" >
               </div>
               <div class="flip-card-back">
-                  
                   <h1>{{ book.title }}</h1>
                   <p>{{ book.description }}</p>
-                  <!-- <p>We love that guy</p> -->
                   <button>More</button>
               </div>
               </div>
           </div>
 
-        </div>
+          <div v-if='filteredBooks == 0' class="zero-results-box">
+              <p>No results matched your search criteria</p>
+          </div>
+      </div>
 
 
     </div>
