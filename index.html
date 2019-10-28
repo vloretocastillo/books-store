@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+    
+  <body>
+    <div id="root" >
+
+      <header >
+        <div class="logo-container">
+          <img src="logo.png" alt="">
+        </div>
+        <div class="search-bar-container">
+          <input placeholder="Search book" type="text" v-model='search' v-on:change='filterBooks()'>
+        </div>
+      </header>
+      <div class="main-container">
+    
+          <div class="flip-card" v-for='book in filteredBooks'>
+              <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <img :src="book.cover" alt="Avatar" >
+              </div>
+              <div class="flip-card-back">
+                  <h1>{{ book.title }}</h1>
+                  <p>{{ book.description }}</p>
+                  <!-- <p>We love that guy</p> -->
+                  <button>More</button>
+              </div>
+              </div>
+          </div>
+
+        </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/vue.js"></script>
+  </body>
+</html>
