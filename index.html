@@ -16,9 +16,12 @@
           <img src="logo.png" alt="">
         </div>
         <div class="search-bar-container">
-          <input placeholder="Search book" type="text" v-model='search' v-on:change='filterBooks()'>
+          <!-- <input placeholder="Search book" type="text" v-model='search' v-on:change='filterBooks()'> -->
+          <input placeholder="Search book" type="text" v-model='searchValue' >
+
         </div>
       </header>
+      <!-- {{ logSearchValue }} -->
       <div class="main-container">
     
           <div class="flip-card" v-for='book in filteredBooks'>
@@ -27,6 +30,7 @@
                   <img :src="book.cover" alt="Avatar" >
               </div>
               <div class="flip-card-back">
+                  
                   <h1>{{ book.title }}</h1>
                   <p>{{ book.description }}</p>
                   <!-- <p>We love that guy</p> -->

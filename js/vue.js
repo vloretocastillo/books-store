@@ -2,20 +2,29 @@ let app = new Vue({
     el: '#root',
     data : {
         books : [],
-        search : '',
-        filteredBooks : []
+        // search : '',
+        searchValue : '',
+        // filteredBooks : []
+    },
+
+    computed : {
+        filteredBooks : function () {
+            let filteredArray = this.books.filter(el => el.title.toLowerCase().match(this.searchValue.toLowerCase()) )
+            return filteredArray.length > 0 ? filteredArray : []
+        }
+        
     },
 
     methods : {
-        filterBooks : function() {
-            console.log('h')
-            let filteredArray = this.books.filter(el => el.title.toLowerCase().match(this.search.toLowerCase()) )
-            console.log(filteredArray.length)
-            if (filteredArray.length == 0) {
+        // filterBooks : function() {
+            // console.log('h')
+            // let filteredArray = this.books.filter(el => el.title.toLowerCase().match(this.search.toLowerCase()) )
+            // console.log(filteredArray.length)
+            // if (filteredArray.length == 0) {
                 
-            }
-            filteredArray.length > 0 ? this.filteredBooks = filteredArray : this.filteredBooks = this.books
-        },
+            // }
+            // filteredArray.length > 0 ? this.filteredBooks = filteredArray : this.filteredBooks = this.books
+        // },
 
         getData : async function () {
             const response = await fetch('https://api.myjson.com/bins/zyv02', {
@@ -27,17 +36,23 @@ let app = new Vue({
         },
 
         // ***********************************************************************************************************************
-        fetchAndRenderData : function (event) {
-            this.getData(this.chamber)
-                .then( () => {
-                    this.filterBooks()
-                }).catch(err => console.log(err))
-        },
+        // fetchAndRenderData : function (event) {
+        //     this.getData(this.chamber)
+        //         .then( () => {
+        //             // this.filterBooks()
+        //         }).catch(err => console.log(err))
+        // },
         
     },
 
+    
+
     created : function () {        
-        this.fetchAndRenderData()
+        // this.fetchAndRenderData()
+        this.getData()
+            .then( () => {
+                // this.filterBooks()
+            }).catch(err => console.log(err))
     },
 
 })
