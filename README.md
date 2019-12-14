@@ -2,7 +2,7 @@
 
 Created a Bookstore website for UBIQUM code academy - fliper books - with live data.
 
-Visit the project -  https://vloretocastillo.github.io/books-store/.
+Visit the project - https://vloretocastillo.github.io/books-store/.
 
 Technologies used:
 
